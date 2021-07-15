@@ -20,7 +20,6 @@ export function getAllProblems() {
 
 export function colorNodes(idxList, color) {
     //idxList is the list of indices in thead to be colored
-    console.log(idxList);
     let thead = getAllProblemNodes();
     for (let i = 0; i < idxList.length; ++i) {
         thead[idxList[i]][0].style.backgroundColor = color;

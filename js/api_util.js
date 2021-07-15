@@ -25,7 +25,7 @@ export async function getAC (handle) {
                     return element.verdict == "OK";
                 });
                 list = list.map(element => {
-                    return {num: element.problem.contestId, pname: element.problem.name};
+                    return {num: element.problem.contestId, pname: element.problem.name.trim()};
                 })
                 resolve(list);
             }

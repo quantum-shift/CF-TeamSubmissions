@@ -4,7 +4,6 @@ import {getAllProblems, colorNodes} from './parse_util.js'
 
 
 function checkEqual(pa, pb) {
-    // console.log(pa.pname, pb.pname, pa.num, pb.num);
     return pa.pname == pb.pname && (pa.num <= pb.num + 1 || pb.num <= pa.num + 1);
 }
 

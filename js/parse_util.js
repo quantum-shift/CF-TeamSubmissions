@@ -1,7 +1,6 @@
 export function getAllProblemNodes () {
     //List of problems in this page
     let ptable = document.querySelector("table[class='problems']");
-    // console.log(ptable);
     //Taking td[0] and td[1] each problem (to uniquely identify that problem)
     let thead = []
     for (let i = 1; i < ptable.rows.length; ++i) {
@@ -24,7 +23,6 @@ export function colorNodes(idxList, color) {
     console.log(idxList);
     let thead = getAllProblemNodes();
     for (let i = 0; i < idxList.length; ++i) {
-        // console.log(thead[idxList[i]]);
         thead[idxList[i]][0].style.backgroundColor = color;
     }
 }

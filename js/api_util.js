@@ -1,9 +1,13 @@
+let proto = 'https://'
+let cf = 'codeforces.com/'
+let api = 'api/'
 export function getSubUrl(handle) {
     //Get the api url to get the submissions of a handle
-    let proto = 'https://'
-    let cf = 'codeforces.com/'
-    let api = 'api/'
     return proto + cf + api + 'user.status?' + 'handle=' + handle;
+}
+
+export function getUserInfoUrl(handle) {
+    return proto + cf + api + 'user.info?' + 'handles=' + handle;
 }
 
 export async function getAC (handle) {
@@ -12,7 +16,6 @@ export async function getAC (handle) {
     return new Promise(async (resolve, reject) => {
         await fetch(getSubUrl(handle)).then(
             subList => {
-                // console.log(subList);
                 return subList.json();
             }
         ).then(
@@ -24,10 +27,23 @@ export async function getAC (handle) {
                 list = list.map(element => {
                     return {num: element.problem.contestId, pname: element.problem.name};
                 })
-                // console.log(list);
                 resolve(list);
-                // console.log(list);
             }
         );    
     })
+}
+
+export async function checkHandle (handle) {
+    alert(getUserInfoUrl(handle));
+    return new Promise (async (resolve, reject) => {
+        await fetch(getUserInfoUrl(handle)).then(
+            result => {
+                return result.json();
+            }
+        ).then(
+            result => {
+                resolve(result.status == "OK");
+            }
+        );
+    });
 }

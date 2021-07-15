@@ -34,7 +34,6 @@ export async function getAC (handle) {
 }
 
 export async function checkHandle (handle) {
-    alert(getUserInfoUrl(handle));
     return new Promise (async (resolve, reject) => {
         await fetch(getUserInfoUrl(handle)).then(
             result => {

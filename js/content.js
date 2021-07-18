@@ -4,7 +4,7 @@ import {getAllProblems, colorNodes} from './parse_util.js'
 
 
 function checkEqual(pa, pb) {
-    return pa.pname == pb.pname && (pa.num <= pb.num + 1 || pb.num <= pa.num + 1);
+    return pa.pname == pb.pname && (pa.num <= pb.num + 1 && pb.num <= pa.num + 1);
 }
 
 
@@ -24,11 +24,16 @@ async function updatePset() {
         let exist = false;
         for (let i = 0; i < problemList.length; ++i) {
             if (checkEqual(element, problemList[i])) {
+                console.log(problemList[i]);
                 exist = true;
                 break;
             }
         }
-        if (exist) idxList.push(index);
+        if (exist) {
+            // alert("WOW");
+            console.log(parsedList[index]);
+            idxList.push(index);
+        }
     })
     colorNodes(idxList, "skyblue");
 }

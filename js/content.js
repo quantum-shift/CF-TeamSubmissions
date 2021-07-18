@@ -24,14 +24,11 @@ async function updatePset() {
         let exist = false;
         for (let i = 0; i < problemList.length; ++i) {
             if (checkEqual(element, problemList[i])) {
-                console.log(problemList[i]);
                 exist = true;
                 break;
             }
         }
         if (exist) {
-            // alert("WOW");
-            console.log(parsedList[index]);
             idxList.push(index);
         }
     })

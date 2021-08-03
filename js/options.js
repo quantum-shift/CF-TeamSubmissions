@@ -3,9 +3,10 @@ import {checkHandle} from './api_util.js'
 async function showFriends() {
     let friendList = await getFriendList();
     let list = document.getElementById('showFriends');
-    list.innerHTML = "List of friends:";
+    list.innerHTML = "List of friends";
     friendList.forEach(element => {
         let li = document.createElement("li");
+        li.style.fontWeight = 100;
         let text = document.createTextNode(element);
         li.appendChild(text);
         list.appendChild(li);

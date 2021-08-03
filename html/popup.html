@@ -4,12 +4,19 @@
         <title>
             CF Team Submissions
         </title>
+        <link rel="stylesheet" href="../css/styles.css">
         <script type = 'module' src = '../js/jquery-3.6.0.min.js'></script>
+        <script type = 'module' src = '../js/options.js'></script>
+        <h2>CF Team Submissions</h2> 
     </head>
     <body>
         <h1>
-            CF Team Submissions
+            <input type = "text" id = "friendName">
+            <input type = "button" class = "addFriendButton" id = "addFriend" value = "Add a friend">
+            <ul id = "showFriends" style = "font-size:medium; text-align:left; font-weight: 400;"><b>List of friends</b></ul>
+            <input type = "button" id = "clearAllFriends" class = "clearAllFriendsButton" value = "Clear friends list">
+            <input type = "color" id = "colorButton" name = "highCol" value = "#87ceeb">
+            <label for = "highCol" style="font-size:medium; font-weight: 100;"> Choose color </label>
         </h1>
-        Go to options to add or remove handles.
     </body>
 </html>

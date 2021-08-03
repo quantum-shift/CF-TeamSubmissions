@@ -1,0 +1,25 @@
+.addFriendButton {
+    background-color: #4387ec;
+    border: none;
+    color: white;
+    padding: 5px 52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.clearAllFriendsButton {
+    background-color: #fa0000;
+    border: none;
+    color: white;
+    padding: 5px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

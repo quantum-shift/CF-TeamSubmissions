@@ -32,6 +32,6 @@ async function updatePset() {
             idxList.push(index);
         }
     })
-    colorNodes(idxList, "skyblue");
+    colorNodes(idxList, "#87ceeb");
 }
 updatePset();
